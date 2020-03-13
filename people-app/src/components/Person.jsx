@@ -9,25 +9,29 @@ class Person extends Component {
             age: this.props.age
         }
 
-         
+
     }
 
     //This is called component created and ready
-    componentWillMount(){
-         //Declaring another variable to hold the state property inside of a parseInt to be sure a number is returned
-         let ageInt = parseInt(this.state.age);//Make an integer from string
-         ageInt += 20;//self increment
- 
-         // example of setting state
-         this.setState(
-             {  //age equals now to the newly created variable above
-                 age: ageInt
-             }
-         );
+    componentWillMount() {
+
     }
-//Do not put set state under render or it will continue to run the render function forever and send you an error
+    //creating an arrow function for an event listener on our button/button will add 1 to age
+    addOne = () => {
+        //using variable to save our new state in
+        let newAge = parseInt(this.state.age);
+        //increment by 1
+        newAge+=1;
+        //using setState to change age to our newAge we defined above
+        this.setState(
+            {
+                age: newAge
+            }
+        )
+    }
+    //Do not put set state under render or it will continue to run the render function forever and send you an error
     render() {
-      
+
         return (
             <div>
                 <header>
@@ -35,6 +39,8 @@ class Person extends Component {
                 </header>
                 <h1 className='green'>Name: {this.state.name}</h1>
                 <h1 className=' blue'>Age: {this.state.age}</h1>
+                {/* Using an inline handler within an element/Giving it the parameter of onclick for the event listener/ calling the previously made arrow function to run its method when you click the button*/}
+                <button onClick={this.addOne}>Add One to Age</button>
             </div>
         )
     }
