@@ -1,0 +1,21 @@
+body{
+  background-color: rgb(212, 124, 139);
+}
+
+.App {
+  text-align: center;
+  background-color: rgb(165, 130, 165);
+  height: 94vh;
+}
+
+.pink{
+  color: rgb(134, 65, 77);
+}
+
+.blue{
+  color: rgb(73, 73, 146);
+}
+
+.green{
+  color: rgb(40, 97, 40);
+}
