@@ -19,3 +19,15 @@ body{
 .green{
   color: rgb(40, 97, 40);
 }
+
+.yellow{
+  color: rgb(219, 219, 70);
+}
+
+.red{
+  background-color: rgb(196, 21, 21);
+  color: pink;
+  border: solid 3px pink;
+  height: 28px;
+  font-size: 15px;
+}

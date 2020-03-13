@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
-import Person from './components/Person';
+import AppContainer from './components/AppContainer';
 
 
 function App() {
   return (
     <div className="App">
-      <Person name='Mary' age='29'/>
-      <Person name='Tom' age='40'/>
-      
+      <AppContainer/>
     </div>
   );
 }

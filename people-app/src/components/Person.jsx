@@ -40,7 +40,7 @@ class Person extends Component {
                 <h1 className='green'>Name: {this.state.name}</h1>
                 <h1 className=' blue'>Age: {this.state.age}</h1>
                 {/* Using an inline handler within an element/Giving it the parameter of onclick for the event listener/ calling the previously made arrow function to run its method when you click the button*/}
-                <button onClick={this.addOne}>Add One to Age</button>
+                <button className='red' onClick={this.addOne}>Add One to Age</button>
             </div>
         )
     }
