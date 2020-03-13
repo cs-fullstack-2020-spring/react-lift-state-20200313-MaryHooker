@@ -3,16 +3,37 @@ import React, { Component } from 'react';
 class Person extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            name: this.props.name,
+            age: this.props.age
+        }
+
+         
+    }
+
+    //This is called component created and ready
+    componentWillMount(){
+         // example of setting state
+         let ageInt = parseInt(this.state.age);//Make an integer from string
+         ageInt += 5;//self increment
+ 
+         this.setState(
+             {
+                 age: ageInt
+             }
+         );
     }
 
     render() {
+      
         return (
             <div>
                 <header>
                     <h1 className='pink'>Person Component Child</h1>
                 </header>
-                <h1 className='green'>Name: {this.props.name}</h1>
-                <h1 className=' blue'>Age: {this.props.age}</h1>
+                <h1 className='green'>Name: {this.state.name}</h1>
+                <h1 className=' blue'>Age: {this.state.age}</h1>
             </div>
         )
     }
