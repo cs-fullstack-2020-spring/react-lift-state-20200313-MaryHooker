@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Person extends Component {
     constructor(props) {
         super(props);
-
+        //using this.state to take the initial properties and be able to change them/or pass them up to a parent component
         this.state = {
             name: this.props.name,
             age: this.props.age
@@ -14,17 +14,18 @@ class Person extends Component {
 
     //This is called component created and ready
     componentWillMount(){
-         // example of setting state
+         //Declaring another variable to hold the state property inside of a parseInt to be sure a number is returned
          let ageInt = parseInt(this.state.age);//Make an integer from string
-         ageInt += 5;//self increment
+         ageInt += 20;//self increment
  
+         // example of setting state
          this.setState(
-             {
+             {  //age equals now to the newly created variable above
                  age: ageInt
              }
          );
     }
-
+//Do not put set state under render or it will continue to run the render function forever and send you an error
     render() {
       
         return (
