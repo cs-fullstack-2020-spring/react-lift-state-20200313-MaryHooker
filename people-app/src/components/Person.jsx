@@ -30,7 +30,7 @@ class Person extends Component {
         )
         //lift the state back up to our container
         //calling our function from our parent
-        this.props.updateAge();
+        this.props.updateAge(this.whateverYouWant);
     }
     //Do not put set state under render or it will continue to run the render function forever and send you an error
     render() {

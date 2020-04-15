@@ -11,7 +11,7 @@ class AppContainer extends Component{
     }
 
     //using an arrow function where each time we call it, it updates by 1
-    updateAgeByOne = () =>{
+    updateAgeByOne = (something) =>{
         //using setState to change the intial state
         this.setState(
             {//should be able to update age property bc the initial age is already starting as an integer and not a string
